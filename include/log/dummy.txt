@@ -1,0 +1,22 @@
+Time : 11:02:22
+SQLSTATE[HY000] [1045] Access denied for user 'root'@'HSI-KBW-149-172-197-150.hsi13.kabel-badenwuerttemberg.de' (using password: YES)
+
+Time : 10:52:59
+SQLSTATE[HY000] [1130] Host 'HSI-KBW-149-172-197-150.hsi13.kabel-badenwuerttemberg.de' is not allowed to connect to this MySQL server
+
+Time : 10:50:08
+SQLSTATE[HY000] [2002] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte.
+
+
+Time : 10:42:50
+SQLSTATE[HY000] [2002] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte.
+
+
+Time : 10:42:41
+SQLSTATE[HY000] [2002] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte.
+
+
+Time : 10:35:30
+SQLSTATE[HY000] [2002] Es konnte keine Verbindung hergestellt werden, da der Zielcomputer die Verbindung verweigerte.
+
+
