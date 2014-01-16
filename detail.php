@@ -9,16 +9,13 @@ if(isset($_SESSION)){
 	print_r($_SESSION);
 }
 include ('include/functions.php');
-
-$selKatBtn='Alle';
+$selKatBtn='';
 if(isset($_GET['selKatBtn'])){
 	$selKatBtn=$_GET['selKatBtn'];
 }
-$id=0;
-if(isset($_GET['id'])){
-	$id=$_GET['id'];
+else{
+	$selKatBtn='Alle';
 }
-
 
 $html="<!DOCTYPE html>
 <html lang='de'>
@@ -30,43 +27,37 @@ $html="<!DOCTYPE html>
 </script>
 </head>
 <body>
-<div id='wrapper'>
 <header id='header'>
 		<p>HTML5 / CSS3 BLOG </p>
 </header>
-
-	<div class='clearfix'>
-		<div class='artikelContainer'>";
-
-$html.=showArt($selKatBtn,$id,0);
-$html.="</div>
-		<div class='kategorieContainer'>";
-
-$html.=getAllKat($id);
-
-$html.=	"</div>
-		<div style='clear:both'></div>
-	</div>
-</div>
-<div id='footer'><p>Footer</p></div>
-
 <p></p>
-<div class='LoginDiv'>
-<form action='admin.php' method ='POST'>
-				<p>Username: <input type ='text' name='user' size='20'></p>
-				<p>Passwort&nbsp;&nbsp;: <input type ='password' name='pwd' size='20' ></p>
-				<input type ='submit' class='LoginButton' value='Anmelden'>
-			</form>
+<div id='wrapper'>
+	<div id='detailLeft'>
+	<div id='prevContainer'>";
+$html.=NextPrefArtBtn($_GET['id'],$selKatBtn,'prev');
+$html.="</div>";
+$html.=getArtMeta($_GET['id']);
+$html.="</div>";
+
+$html.="<div id='detailRight'><div id='nextContainer'>";
+$html.=NextPrefArtBtn($_GET['id'],$selKatBtn,'next');
+$html.="</div>";
+	$html.="<div id='katList'>";
+		$html.=getAllKat($_GET['id']);
+	$html.="</div>";
+$html.="</div>";
+
+$html.="<div id='detailCenter'>
+";
+$html.=getArtContent($_GET['id']);
+$html.="</div>
+		<div style='clear:both'></div>
 </div>
+<p>&nbsp;</p>
+
+<div id='footer'><p>Footer</p></div>
 
 </body>";
 
 echo $html;
-
-
-
-
-
-
-
 ?>
