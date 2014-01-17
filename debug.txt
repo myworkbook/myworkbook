@@ -1,0 +1,15 @@
+insert into Artikel
+			(titel,
+			TIMESTAMP,
+			CREATEDATE,
+			kat_idfk,
+			content,
+			autor_idfk)
+		values(
+			'Noch ein Test',
+			CURRENT_TIMESTAMP(),
+			CURRENT_TIMESTAMP(),
+			'15',
+			'<p>Test the quick brown fox jumps over the lazy dog</p>
+',
+			'1')

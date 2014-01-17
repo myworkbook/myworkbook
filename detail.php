@@ -54,6 +54,12 @@ $html.="</div>
 		<div style='clear:both'></div>
 </div>
 <p>&nbsp;</p>
+<p>
+	<form action='index.php'>
+		<input type='hidden' name='Logout' value='Logout'>
+		<input type='submit' class='KatButton' value='zurück'>
+	</form>
+</p>
 
 <div id='footer'><p>Footer</p></div>
 
